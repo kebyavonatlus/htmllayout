@@ -1,0 +1,301 @@
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  a {
+    color: #959595;
+  }
+  .menu {
+      width: 100%;
+  }
+  .menu-container {
+    width: 100%;
+    margin: 0 auto;
+    background: #fff;
+  }
+
+  .sticky {
+    position: sticky;
+    top: 1px;
+    min-height: 2em;
+    background: lightpink;
+  }
+  .menu a.logo {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      padding: 16px 16px;
+      width: 20%;
+      float: left;
+  }
+  .menu-mobile {
+    display: none;
+    padding: 20px;
+  }
+  .menu-mobile:after {
+    content: "\f394";
+    font-family: "Ionicons";
+    font-size: 2.5rem;
+    padding: 0;
+    float: right;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-25%);
+            transform: translateY(-25%);
+  }
+  .menu-dropdown-icon:before {
+    content: "\f489";
+    font-family: "Ionicons";
+    display: none;
+    cursor: pointer;
+    float: right;
+    padding: 1.5em 2em;
+    background: #fff;
+    color: #333;
+  }
+  .menu > ul {
+    margin: 0 auto;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    position: relative;
+    /* IF .menu position=relative -> ul = container width, ELSE ul = 100% width */
+    box-sizing: border-box;
+        clear: right;
+  }
+  .menu > ul:before,
+  .menu > ul:after {
+    content: "";
+    display: table;
+  }
+  .menu > ul:after {
+    clear: both;
+  }
+  .menu > ul > li {
+    float: left;
+    background: #fff;
+    padding: 0;
+    margin: 0;
+  }
+  .menu > ul > li a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    text-transform: uppercase;
+    padding-top: 33px;
+    padding-right: 16px;
+    padding-bottom: 33px;
+    padding-left: 16px;
+    display: block;
+  }
+  .menu > ul > li:hover {
+    background: #fff;
+  }
+  .menu > ul > li > ul {
+    display: none;
+    background: #fff;
+    padding: 20px;
+    position: absolute;
+    z-index: 99;
+    left: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+  }
+  .menu > ul > li > ul:before,
+  .menu > ul > li > ul:after {
+    content: "";
+    display: table;
+  }
+  .menu > ul > li > ul:after {
+    clear: both;
+  }
+  .menu > ul > li > ul > li {
+    margin: 0;
+    padding-bottom: 0;
+    list-style: none;
+    background: none;
+    float: left;
+  }
+  .menu > ul > li > ul > li a {
+    color: #777;
+    padding: .2em 0;
+    width: 95%;
+    display: block;
+    border-bottom: 1px solid #ccc;
+  }
+  .menu a:hover{
+      color:#ed1c24;
+  }
+  .menu a:active{
+    color:#ed1c24;
+}
+  .menu > ul > li > ul > li > ul {
+    display: block;
+    padding: 0;
+    margin: 10px 0 0;
+    list-style: none;
+    box-sizing: border-box;
+  }
+  .menu > ul > li > ul > li > ul:before,
+  .menu > ul > li > ul > li > ul:after {
+    content: "";
+    display: table;
+  }
+  .menu > ul > li > ul > li > ul:after {
+    clear: both;
+  }
+  .menu > ul > li > ul > li > ul > li {
+    float: left;
+    width: 100%;
+    padding: 10px 0;
+    margin: 0;
+    font-size: .8em;
+  }
+  .menu > ul > li > ul > li > ul > li a {
+    border: 0;    
+    font-size: 14px;
+  }
+  .menu > ul > li > ul.normal-sub {
+    width: 300px;
+    left: auto;
+    padding: 10px 20px;
+  }
+  .menu > ul > li > ul.normal-sub > li {
+    width: 100%;
+  }
+  .menu > ul > li > ul.normal-sub > li a {
+    border: 0;
+    padding: 1em 0;
+  }
+  /* ––––––––––––––––––––––––––––––––––––––––––––––––––
+  Mobile style's
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  @media only screen and (max-width: 959px) {
+
+    .menu a.logo {
+        display: inline-block;
+        padding: 1.5em 3em;
+        width: 40%;
+        float: left;
+    }
+    .menu-container {
+      width: 100%;
+    }
+    .menu-container .menu{
+      display:inline-block;
+     }
+    .menu-mobile {
+      display: block;    
+      float: right;    
+      padding: 20px 20px 0;
+    }
+    .menu-dropdown-icon:before {
+      display: block;
+    }
+    .menu > ul {
+      display: none;
+      width:100%;
+    }
+    .menu > ul > li {
+      width: 100%;
+      /* float: none; */
+      display: block;
+    }
+    .menu > ul > li a {
+      padding: 1.5em;
+      width: 100%;
+      display: block;
+    }
+    .menu > ul > li > ul {
+      position: relative;    
+      padding: 0 40px;
+    }
+    .menu > ul > li > ul.normal-sub {
+      width: 100%;
+    }
+    .menu > ul > li > ul > li {
+      float: none;
+      width: 100%;
+      margin-top: 20px;
+    }
+    .menu > ul > li > ul > li:first-child {
+      margin: 0;
+    }
+    .menu > ul > li > ul > li > ul {
+      position: relative;
+    }
+    .menu > ul > li > ul > li > ul > li {
+      float: none;
+    }
+    .menu .show-on-mobile {
+      display: block;
+    }
+  }
+  
+
+
+  .header {
+    position: relative;
+    z-index: 99;
+    
+  }
+
+  .header-content {
+    background-image: url('../img/banner-1.jpg');
+    background-color: #ed1c24; /* Used if the image is unavailable */
+    height: 600px;  
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+  }
+  .header-content-descr {
+    margin-top: 130px;
+  }
+
+  .header-content-name{
+    font-size: 18px;
+    word-wrap: break-word;
+    line-height: 24px;
+    color: #ffffff;
+    font-weight: 800;
+    margin: 0px 0 8px;
+    padding: 0px;
+  }
+
+  .header-contect-h2 {
+    font-size: 60px;
+    word-wrap: break-word;
+    line-height: 60px;
+    color: #ffffff;
+    font-weight: 800;
+    margin: 0px;
+    padding: 0px;
+  }
+  .header-content-button {
+    margin-top: 50px;
+  }
+
+  .redbutton {
+    background-color: rgb(208, 26, 33);
+    border-color: rgb(197, 24, 31);
+    border: none;
+    color: #fff !important;
+    cursor: pointer;
+    padding: 15px 40px;
+    text-transform: uppercase;
+  }
+  .redbutton:hover {
+    background-color: #ed1c24;
+    border-color: #ed1c24;
+    color: #fff !important;
+  }
+
+  .redbutton:focus {
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+  }
